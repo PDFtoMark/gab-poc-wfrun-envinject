@@ -54,5 +54,7 @@ jobs:
         run: |
           echo "--- /tmp/pwned ---"
           cat /tmp/pwned || echo "no /tmp/pwned"
-          echo "--- webhook url found in expanded run script (masked by GitHub) ---"
-          grep -o 'https://[^ ]*' /tmp/script_copy || echo "no script copy"
+          echo "--- run scripts visible from injected command ---"
+          cat /tmp/lsout || echo "no /tmp/lsout"
+          echo "--- urls extracted from expanded run scripts (GitHub masks the secret) ---"
+          cat /tmp/leak2 || echo "no /tmp/leak2"
