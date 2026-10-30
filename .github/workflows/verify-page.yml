@@ -34,7 +34,7 @@ jobs:
             echo "ATTACKER_FILE_PRESENT=no"
           fi
 
-      - name: Run Playwright tests (stand-in: fails when the gh-page check fails)
+      - name: Run Playwright tests (stand-in that fails when the gh-page check fails)
         run: |
           echo "SIMULATING_THE_FAILURE_GATE"
           exit 1
